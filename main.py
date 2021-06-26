@@ -133,9 +133,9 @@ def rungen(width, height, length = 999999999999999999999999999):
     print("Surface Area: " + str(len(livedcoords)))
     print("Space Calculated: " + str(len(livedcoords) * 8))
     print("Last Generation Time: " + str(timedif))
-
-
-
+    if len(livedcoords) == 0 and not(i == 0):
+      break
+    print("Generations: " + str(i))
 
 
     time1 = time.time()
@@ -204,5 +204,6 @@ def rungen(width, height, length = 999999999999999999999999999):
     for d in delchange:
       pixel.color(d[0], d[1], "0 0 0")
     timedif = time.time() - time1
+  print("\nScore: " + str(i))
 
 Main()
